@@ -18,7 +18,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    [self initApp];
+    [self initButtonKun];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -26,7 +26,7 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void) initApp{
+- (void) initButtonKun{
     UIButton * mainButton = [[UIButton alloc] initWithFrame:CGRectMake(20, 200, 50, 50)];
     mainButton.layer.cornerRadius = 25.0f;
     [mainButton setBackgroundColor:[UIColor yellowColor]];
