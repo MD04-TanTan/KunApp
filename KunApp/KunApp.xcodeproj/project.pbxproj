@@ -9,11 +9,14 @@
 /* Begin PBXBuildFile section */
 		2EEE93661B9D9C0900987165 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EEE93651B9D9C0900987165 /* main.m */; };
 		2EEE93691B9D9C0900987165 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EEE93681B9D9C0900987165 /* AppDelegate.m */; };
-		2EEE936C1B9D9C0900987165 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EEE936B1B9D9C0900987165 /* ViewController.m */; };
+		2EEE936C1B9D9C0900987165 /* HomeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EEE936B1B9D9C0900987165 /* HomeVC.m */; };
 		2EEE936F1B9D9C0900987165 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2EEE936D1B9D9C0900987165 /* Main.storyboard */; };
 		2EEE93711B9D9C0900987165 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2EEE93701B9D9C0900987165 /* Images.xcassets */; };
 		2EEE93741B9D9C0900987165 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2EEE93721B9D9C0900987165 /* LaunchScreen.xib */; };
 		2EEE93801B9D9C0900987165 /* KunAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EEE937F1B9D9C0900987165 /* KunAppTests.m */; };
+		2EEE938B1B9E938400987165 /* LoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EEE938A1B9E938400987165 /* LoginVC.m */; };
+		2EEE93921B9ED08700987165 /* SignUpVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EEE93911B9ED08700987165 /* SignUpVC.m */; };
+		2EEE93951B9ED78000987165 /* UpdateVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EEE93941B9ED78000987165 /* UpdateVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,14 +35,20 @@
 		2EEE93651B9D9C0900987165 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2EEE93671B9D9C0900987165 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		2EEE93681B9D9C0900987165 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		2EEE936A1B9D9C0900987165 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		2EEE936B1B9D9C0900987165 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		2EEE936A1B9D9C0900987165 /* HomeVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeVC.h; sourceTree = "<group>"; };
+		2EEE936B1B9D9C0900987165 /* HomeVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeVC.m; sourceTree = "<group>"; };
 		2EEE936E1B9D9C0900987165 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2EEE93701B9D9C0900987165 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		2EEE93731B9D9C0900987165 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		2EEE93791B9D9C0900987165 /* KunAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KunAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EEE937E1B9D9C0900987165 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2EEE937F1B9D9C0900987165 /* KunAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KunAppTests.m; sourceTree = "<group>"; };
+		2EEE93891B9E938400987165 /* LoginVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginVC.h; sourceTree = "<group>"; };
+		2EEE938A1B9E938400987165 /* LoginVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginVC.m; sourceTree = "<group>"; };
+		2EEE93901B9ED08700987165 /* SignUpVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpVC.h; sourceTree = "<group>"; };
+		2EEE93911B9ED08700987165 /* SignUpVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpVC.m; sourceTree = "<group>"; };
+		2EEE93931B9ED78000987165 /* UpdateVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UpdateVC.h; sourceTree = "<group>"; };
+		2EEE93941B9ED78000987165 /* UpdateVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UpdateVC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,8 +92,7 @@
 			children = (
 				2EEE93671B9D9C0900987165 /* AppDelegate.h */,
 				2EEE93681B9D9C0900987165 /* AppDelegate.m */,
-				2EEE936A1B9D9C0900987165 /* ViewController.h */,
-				2EEE936B1B9D9C0900987165 /* ViewController.m */,
+				2EEE938C1B9E939800987165 /* ViewController */,
 				2EEE936D1B9D9C0900987165 /* Main.storyboard */,
 				2EEE93701B9D9C0900987165 /* Images.xcassets */,
 				2EEE93721B9D9C0900987165 /* LaunchScreen.xib */,
@@ -117,6 +125,21 @@
 				2EEE937E1B9D9C0900987165 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2EEE938C1B9E939800987165 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2EEE93901B9ED08700987165 /* SignUpVC.h */,
+				2EEE93911B9ED08700987165 /* SignUpVC.m */,
+				2EEE936A1B9D9C0900987165 /* HomeVC.h */,
+				2EEE936B1B9D9C0900987165 /* HomeVC.m */,
+				2EEE93891B9E938400987165 /* LoginVC.h */,
+				2EEE938A1B9E938400987165 /* LoginVC.m */,
+				2EEE93931B9ED78000987165 /* UpdateVC.h */,
+				2EEE93941B9ED78000987165 /* UpdateVC.m */,
+			);
+			name = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,8 +242,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2EEE936C1B9D9C0900987165 /* ViewController.m in Sources */,
+				2EEE936C1B9D9C0900987165 /* HomeVC.m in Sources */,
+				2EEE93951B9ED78000987165 /* UpdateVC.m in Sources */,
 				2EEE93691B9D9C0900987165 /* AppDelegate.m in Sources */,
+				2EEE93921B9ED08700987165 /* SignUpVC.m in Sources */,
+				2EEE938B1B9E938400987165 /* LoginVC.m in Sources */,
 				2EEE93661B9D9C0900987165 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
