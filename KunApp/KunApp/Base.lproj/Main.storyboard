@@ -230,6 +230,9 @@
                                 <state key="normal" title="Sign Up">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="btnSignUp_Tapped:" destination="hVb-kq-fO9" eventType="touchUpInside" id="6j3-Cw-NDd"/>
+                                </connections>
                             </button>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="esy-7L-G9e">
                                 <rect key="frame" x="157" y="179" width="123" height="29"/>
@@ -243,6 +246,13 @@
                     </view>
                     <navigationItem key="navigationItem" id="Ve8-Gj-fzN"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="btnSignUp" destination="4JM-tM-k8i" id="HWq-xc-pb7"/>
+                        <outlet property="sgmSex" destination="esy-7L-G9e" id="54S-2p-ias"/>
+                        <outlet property="tfPassword" destination="NBa-5Z-dsQ" id="VFB-Qe-XXa"/>
+                        <outlet property="tfPhone" destination="y1q-6l-O0M" id="0C3-Ld-79y"/>
+                        <outlet property="tfUserName" destination="Nxe-Vz-d8G" id="1r4-px-x0L"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gjf-VD-MPN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -263,7 +273,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yD6-qr-pmp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-475" y="253"/>
+            <point key="canvasLocation" x="-580" y="247"/>
         </scene>
     </scenes>
 </document>

@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import "HomeVC.h"
+#import "KulUser.h"
+#import "SignUpVC.h"
+#import "MySingleton.h"
+
 
 @interface LoginVC : UIViewController
 - (IBAction)btnLogin_Tapped:(id)sender;

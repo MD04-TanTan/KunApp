@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E8475871B9FCF3E00D0CE86 /* KulUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E8475861B9FCF3E00D0CE86 /* KulUser.m */; };
+		2E84758A1BA01C5400D0CE86 /* MySingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E8475891BA01C5400D0CE86 /* MySingleton.m */; };
 		2EEE93661B9D9C0900987165 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EEE93651B9D9C0900987165 /* main.m */; };
 		2EEE93691B9D9C0900987165 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EEE93681B9D9C0900987165 /* AppDelegate.m */; };
 		2EEE936C1B9D9C0900987165 /* HomeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EEE936B1B9D9C0900987165 /* HomeVC.m */; };
@@ -30,6 +32,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2E8475851B9FCF3E00D0CE86 /* KulUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KulUser.h; sourceTree = "<group>"; };
+		2E8475861B9FCF3E00D0CE86 /* KulUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KulUser.m; sourceTree = "<group>"; };
+		2E8475881BA01C5400D0CE86 /* MySingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MySingleton.h; sourceTree = "<group>"; };
+		2E8475891BA01C5400D0CE86 /* MySingleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MySingleton.m; sourceTree = "<group>"; };
 		2EEE93601B9D9C0900987165 /* KunApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KunApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EEE93641B9D9C0900987165 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2EEE93651B9D9C0900987165 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -69,6 +75,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2E8475841B9FCF0900D0CE86 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2E8475851B9FCF3E00D0CE86 /* KulUser.h */,
+				2E8475861B9FCF3E00D0CE86 /* KulUser.m */,
+				2E8475881BA01C5400D0CE86 /* MySingleton.h */,
+				2E8475891BA01C5400D0CE86 /* MySingleton.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		2EEE93571B9D9C0900987165 = {
 			isa = PBXGroup;
 			children = (
@@ -92,6 +109,7 @@
 			children = (
 				2EEE93671B9D9C0900987165 /* AppDelegate.h */,
 				2EEE93681B9D9C0900987165 /* AppDelegate.m */,
+				2E8475841B9FCF0900D0CE86 /* Model */,
 				2EEE938C1B9E939800987165 /* ViewController */,
 				2EEE936D1B9D9C0900987165 /* Main.storyboard */,
 				2EEE93701B9D9C0900987165 /* Images.xcassets */,
@@ -243,9 +261,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				2EEE936C1B9D9C0900987165 /* HomeVC.m in Sources */,
+				2E84758A1BA01C5400D0CE86 /* MySingleton.m in Sources */,
 				2EEE93951B9ED78000987165 /* UpdateVC.m in Sources */,
 				2EEE93691B9D9C0900987165 /* AppDelegate.m in Sources */,
 				2EEE93921B9ED08700987165 /* SignUpVC.m in Sources */,
+				2E8475871B9FCF3E00D0CE86 /* KulUser.m in Sources */,
 				2EEE938B1B9E938400987165 /* LoginVC.m in Sources */,
 				2EEE93661B9D9C0900987165 /* main.m in Sources */,
 			);

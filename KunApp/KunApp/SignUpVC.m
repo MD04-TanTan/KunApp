@@ -18,6 +18,10 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.navigationController.title = @"Sign Up";
+    //[self.btnSignUp setEnabled:NO];
+
+    //_kulUsersDict = [[NSMutableDictionary alloc] init];
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -25,15 +29,62 @@
     // Dispose of any resources that can be recreated.
 }
 
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void) initSignUp{
+    NSString * userName = self.tfUserName.text;
+    NSString * passWord = self.tfPassword.text;
+    NSInteger sex = self.sgmSex.selectedSegmentIndex;
+    NSInteger phone = (NSInteger ) self.tfPhone.text.integerValue;
+    
+    if (![userName isEqualToString:@""] && ![passWord isEqualToString:@""]) {
+        
+        
+        KulUser * user = [[KulUser alloc] initKulUserWithUserName:userName withPass:passWord withSex:sex withPhone:phone];
+        NSLog(@"user name %@",user.userName);
+        NSLog(@"sex: %li ",user.sex);
+        NSLog(@"phone: %li",user.phoneNumber);
+        if (user) {
+            
+            MySingleton * singleton = [MySingleton getInstance];
+            //Add user to array
+            
+            [singleton.kulUsers addObject:user];
+            //Add array to dictionary
+            
+            [singleton.kulUsersDict setObject:singleton.kulUsers forKey:@"KulUser"];
+            
+            
+            UIAlertView * alert = [[UIAlertView alloc] initWithTitle:@"Message" message:@"Sign up success!" delegate:self cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
+            [alert show];
+            NSLog(@"array %li ",singleton.kulUsers.count);
+            NSLog(@"dictionary %@ ",[singleton.kulUsersDict objectForKey:@"KulUser"]);
+            
+            //Update
+            self.tfUserName.text = nil;
+            self.tfPassword.text = nil;
+            //self.sgmSex.selectedSegmentIndex = 0;
+            self.tfPhone.text = nil;
+        }
+    }
+    else
+    {
+        UIAlertView * alert = [[UIAlertView alloc] initWithTitle:@"Message" message:@"Sign up fail!" delegate:self cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
+        [alert show];
+    }
+    
 }
-*/
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
+    if (buttonIndex == 0) {
+        [self.navigationController popViewControllerAnimated:YES];
+    }
+}
+
+- (IBAction)btnSignUp_Tapped:(id)sender {
+//    if([self.tfUserName.text isEqualToString:@""] || [self.tfPassword.text isEqualToString:@""])
+//    {
+//        NSLog(@"NULLLL");
+//    }
+    [self initSignUp];
+}
 
 @end

@@ -23,6 +23,7 @@
 
     [self initKul];
     //self.view.userInteractionEnabled=YES;
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -38,6 +39,7 @@
     mWidth = [UIScreen mainScreen].bounds.size.width;
     mHeight = [UIScreen mainScreen].bounds.size.height;
     self.title  = @"HOME";
+    
     
     [self initButtonKul];
     [self initMenu];
@@ -90,7 +92,7 @@
 }
 
 - (IBAction)btnLoginTapped:(id)sender{
-    NSLog(@"aaaaa");
+    //NSLog(@"aaaaa");
     //LoginVC * loginVC = [[LoginVC alloc] init];
     [self performSegueWithIdentifier:@"pushLogin" sender:self];
 

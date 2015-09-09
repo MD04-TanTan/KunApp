@@ -8,24 +8,35 @@
 
 #import "LoginVC.h"
 
-@interface LoginVC ()
+@interface LoginVC (){
+    //NSMutableArray * kulUsers;
+    //NSMutableDictionary * kulUsersDict;
+}
 
 @end
 
 @implementation LoginVC
 
-//- (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil{
-//
-//    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-//    
-//    return self;
-//}
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     //[self.navigationController setNavigationBarHidden:YES];
+   
+    //kulUsersDict = [[NSMutableDictionary alloc] init];
     [self initLayout];
     //self.navigationItem.hidesBackButton = YES;
+
+    
+}
+
+- (void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    //NSLog(@"11111");
+    
+//    MySingleton * singleton = [MySingleton getInstance];
+//    singleton.kulUsers = [singleton.kulUsers arrayByAddingObjectsFromArray:[singleton.kulUsersDict objectForKey:@"KulUser"]];
+//    NSLog(@"arr user login %li",singleton.kulUsers.count);
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -35,11 +46,14 @@
 
 -(void) initLayout{
     self.title = @"Log in";
-
+    //kulUsers = [kulUsersDict objectForKey:@"KulUsers"];
+    
+     //NSLog(@"arr user login %li",kulUsers.count);
+    
 }
 
 
 - (IBAction)btnLogin_Tapped:(id)sender {
-    [self performSegueWithIdentifier:@"pushDetail" sender:self];
+    //[self performSegueWithIdentifier:@"pushDetail" sender:self];
 }
 @end

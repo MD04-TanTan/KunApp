@@ -7,8 +7,19 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "KulUser.h"
+#import "MySingleton.h"
 
-@interface SignUpVC : UIViewController
+@interface SignUpVC : UIViewController<UIAlertViewDelegate>
+
+@property (weak, nonatomic) IBOutlet UITextField *tfUserName;
+@property (weak, nonatomic) IBOutlet UITextField *tfPassword;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *sgmSex;
+@property (weak, nonatomic) IBOutlet UITextField *tfPhone;
+
+@property (weak, nonatomic) IBOutlet UIButton *btnSignUp;
+
+- (IBAction)btnSignUp_Tapped:(id)sender;
 
 
 @end
