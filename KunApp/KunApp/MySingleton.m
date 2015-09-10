@@ -16,6 +16,7 @@
     static dispatch_once_t predicate = 0;
     dispatch_once(&predicate, ^{
         instance = [[MySingleton alloc]init];
+//        instance.kulUsers = [[NSMutableArray alloc] init];
     });
     return instance;
     
@@ -25,8 +26,15 @@
     if (self = [super init]) {
         kulUsers = [[NSMutableArray alloc] init];
         kulUsersDict = [[NSMutableDictionary alloc] init];
+        [kulUsersDict setObject:kulUsers forKey:@"KulUser"];
     }
     return self;
 }
+//- (void)setKulUsers:(NSMutableArray *)theKulUsers
+//{
+//    if (kulUsers) {
+//        kulUsers = theKulUsers;
+//    }
+//}
 
 @end

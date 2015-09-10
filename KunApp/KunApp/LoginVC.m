@@ -9,8 +9,7 @@
 #import "LoginVC.h"
 
 @interface LoginVC (){
-    //NSMutableArray * kulUsers;
-    //NSMutableDictionary * kulUsersDict;
+
 }
 
 @end
@@ -21,9 +20,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     //[self.navigationController setNavigationBarHidden:YES];
-   
-    //kulUsersDict = [[NSMutableDictionary alloc] init];
-    [self initLayout];
+    self.title = @"Log in";
     //self.navigationItem.hidesBackButton = YES;
 
     
@@ -31,10 +28,9 @@
 
 - (void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
-    //NSLog(@"11111");
     
-//    MySingleton * singleton = [MySingleton getInstance];
-//    singleton.kulUsers = [singleton.kulUsers arrayByAddingObjectsFromArray:[singleton.kulUsersDict objectForKey:@"KulUser"]];
+
+//    NSLog(@"String: %@",[singleton.kulUsersDict objectForKey:DictKUserKey]);
 //    NSLog(@"arr user login %li",singleton.kulUsers.count);
     
 }
@@ -44,16 +40,30 @@
     // Dispose of any resources that can be recreated.
 }
 
--(void) initLayout{
-    self.title = @"Log in";
-    //kulUsers = [kulUsersDict objectForKey:@"KulUsers"];
+-(void) logIn{
+    NSString * userName = _tfUserName.text;
+    NSString * passWord = _tfPassword.text;
     
-     //NSLog(@"arr user login %li",kulUsers.count);
+    MySingleton * singleton = [MySingleton getInstance];
+    singleton.kulUsers = [singleton.kulUsersDict objectForKey:DictKUserKey];
+    NSLog(@"String: %@",[singleton.kulUsersDict objectForKey:DictKUserKey]);
+    NSLog(@"arr user login %li",singleton.kulUsers.count);
     
+    for (KulUser * user in singleton.kulUsers) {
+        if ([userName isEqualToString:user.userName] && [passWord isEqualToString:user.passWord]) {
+            UIAlertView * alert = [[UIAlertView alloc] initWithTitle:MESSAGE message:@"Sign in success!" delegate:self cancelButtonTitle:nil otherButtonTitles:OK, nil];
+            [alert show];
+            //[self performSegueWithIdentifier:@"pushDetail" sender:self];
+        }
+        else{
+            UIAlertView * alert = [[UIAlertView alloc] initWithTitle:@"Message" message:@"Log in fail!" delegate:self cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
+            [alert show];
+        }
+    }
 }
 
 
 - (IBAction)btnLogin_Tapped:(id)sender {
-    //[self performSegueWithIdentifier:@"pushDetail" sender:self];
+    [self logIn];
 }
 @end

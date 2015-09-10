@@ -91,6 +91,8 @@
                     <navigationItem key="navigationItem" id="xc8-hC-5Da"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
+                        <outlet property="tfPassword" destination="J89-ec-pU3" id="Ifg-jS-qmE"/>
+                        <outlet property="tfUserName" destination="GTP-t8-ktp" id="1dR-23-4le"/>
                         <segue destination="mc4-Hm-zon" kind="push" identifier="pushDetail" id="A2N-mP-gDa"/>
                     </connections>
                 </viewController>

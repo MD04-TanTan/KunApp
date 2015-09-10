@@ -7,13 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "HomeVC.h"
-#import "KulUser.h"
-#import "SignUpVC.h"
-#import "MySingleton.h"
+
+#import "BaseVC.h"
 
 
 @interface LoginVC : UIViewController
+
 - (IBAction)btnLogin_Tapped:(id)sender;
+
+@property (weak, nonatomic) IBOutlet UITextField *tfUserName;
+@property (weak, nonatomic) IBOutlet UITextField *tfPassword;
 
 @end

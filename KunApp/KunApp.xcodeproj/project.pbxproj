@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2E8475871B9FCF3E00D0CE86 /* KulUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E8475861B9FCF3E00D0CE86 /* KulUser.m */; };
 		2E84758A1BA01C5400D0CE86 /* MySingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E8475891BA01C5400D0CE86 /* MySingleton.m */; };
+		2E9D22911BA1328600B88077 /* BaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E9D22901BA1328600B88077 /* BaseVC.m */; };
 		2EEE93661B9D9C0900987165 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EEE93651B9D9C0900987165 /* main.m */; };
 		2EEE93691B9D9C0900987165 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EEE93681B9D9C0900987165 /* AppDelegate.m */; };
 		2EEE936C1B9D9C0900987165 /* HomeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EEE936B1B9D9C0900987165 /* HomeVC.m */; };
@@ -36,6 +37,8 @@
 		2E8475861B9FCF3E00D0CE86 /* KulUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KulUser.m; sourceTree = "<group>"; };
 		2E8475881BA01C5400D0CE86 /* MySingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MySingleton.h; sourceTree = "<group>"; };
 		2E8475891BA01C5400D0CE86 /* MySingleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MySingleton.m; sourceTree = "<group>"; };
+		2E9D228F1BA1328600B88077 /* BaseVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseVC.h; sourceTree = "<group>"; };
+		2E9D22901BA1328600B88077 /* BaseVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseVC.m; sourceTree = "<group>"; };
 		2EEE93601B9D9C0900987165 /* KunApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KunApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EEE93641B9D9C0900987165 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2EEE93651B9D9C0900987165 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -156,6 +159,8 @@
 				2EEE938A1B9E938400987165 /* LoginVC.m */,
 				2EEE93931B9ED78000987165 /* UpdateVC.h */,
 				2EEE93941B9ED78000987165 /* UpdateVC.m */,
+				2E9D228F1BA1328600B88077 /* BaseVC.h */,
+				2E9D22901BA1328600B88077 /* BaseVC.m */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -263,6 +268,7 @@
 				2EEE936C1B9D9C0900987165 /* HomeVC.m in Sources */,
 				2E84758A1BA01C5400D0CE86 /* MySingleton.m in Sources */,
 				2EEE93951B9ED78000987165 /* UpdateVC.m in Sources */,
+				2E9D22911BA1328600B88077 /* BaseVC.m in Sources */,
 				2EEE93691B9D9C0900987165 /* AppDelegate.m in Sources */,
 				2EEE93921B9ED08700987165 /* SignUpVC.m in Sources */,
 				2E8475871B9FCF3E00D0CE86 /* KulUser.m in Sources */,

@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "LoginVC.h"
+#import "BaseVC.h"
 
 @interface HomeVC : UIViewController
 

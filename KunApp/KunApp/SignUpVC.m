@@ -19,7 +19,7 @@
     // Do any additional setup after loading the view.
     self.navigationController.title = @"Sign Up";
     //[self.btnSignUp setEnabled:NO];
-
+    
     //_kulUsersDict = [[NSMutableDictionary alloc] init];
     
 }
@@ -46,17 +46,19 @@
             
             MySingleton * singleton = [MySingleton getInstance];
             //Add user to array
-            
             [singleton.kulUsers addObject:user];
-            //Add array to dictionary
+            if (singleton.kulUsers != nil) {
+                
+                //Add array to dictionary
+                [singleton.kulUsersDict setObject:singleton.kulUsers forKey:DictKUserKey];
+
+            }
             
-            [singleton.kulUsersDict setObject:singleton.kulUsers forKey:@"KulUser"];
-            
-            
-            UIAlertView * alert = [[UIAlertView alloc] initWithTitle:@"Message" message:@"Sign up success!" delegate:self cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
+            UIAlertView * alert = [[UIAlertView alloc] initWithTitle:MESSAGE message:@"Sign up success!" delegate:self cancelButtonTitle:nil otherButtonTitles:OK, nil];
+            alert.tag = 1;
             [alert show];
             NSLog(@"array %li ",singleton.kulUsers.count);
-            NSLog(@"dictionary %@ ",[singleton.kulUsersDict objectForKey:@"KulUser"]);
+            NSLog(@"dictionary %@ ",[singleton.kulUsersDict objectForKey:DictKUserKey]);
             
             //Update
             self.tfUserName.text = nil;
@@ -74,7 +76,7 @@
 }
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
-    if (buttonIndex == 0) {
+    if (alertView.tag == 1 &&buttonIndex == 0) {
         [self.navigationController popViewControllerAnimated:YES];
     }
 }

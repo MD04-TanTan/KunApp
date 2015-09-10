@@ -7,10 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "KulUser.h"
-#import "MySingleton.h"
+#import "BaseVC.h"
 
-@interface SignUpVC : UIViewController<UIAlertViewDelegate>
+@interface SignUpVC :UIViewController <UIAlertViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *tfUserName;
 @property (weak, nonatomic) IBOutlet UITextField *tfPassword;
