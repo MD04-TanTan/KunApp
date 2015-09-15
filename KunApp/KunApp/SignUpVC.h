@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "BaseVC.h"
 
-@interface SignUpVC :UIViewController <UIAlertViewDelegate>
+@interface SignUpVC :UIViewController <UIAlertViewDelegate,NSURLConnectionDelegate,NSURLConnectionDataDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *tfUserName;
 @property (weak, nonatomic) IBOutlet UITextField *tfPassword;
@@ -19,6 +19,8 @@
 @property (weak, nonatomic) IBOutlet UIButton *btnSignUp;
 
 - (IBAction)btnSignUp_Tapped:(id)sender;
+
+- (void) SignUp;
 
 
 @end

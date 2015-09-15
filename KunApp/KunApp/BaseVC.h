@@ -9,6 +9,8 @@
 #define DictKUserKey @"KulUser"
 #define MESSAGE @"Message"
 #define OK @"OK"
+#define API_Login @"http://apisdk-kietthm.kul.local/user/login.html"
+#define API_CreateUser @"http://apisdk-kietthm.kul.local/user/create.html"
 
 #import <UIKit/UIKit.h>
 #import "KulUser.h"

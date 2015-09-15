@@ -11,7 +11,7 @@
 #import "BaseVC.h"
 
 
-@interface LoginVC : UIViewController
+@interface LoginVC : UIViewController <NSURLConnectionDelegate, NSURLConnectionDataDelegate>
 
 - (IBAction)btnLogin_Tapped:(id)sender;
 
