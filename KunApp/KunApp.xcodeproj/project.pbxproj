@@ -10,6 +10,8 @@
 		2E8475871B9FCF3E00D0CE86 /* KulUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E8475861B9FCF3E00D0CE86 /* KulUser.m */; };
 		2E84758A1BA01C5400D0CE86 /* MySingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E8475891BA01C5400D0CE86 /* MySingleton.m */; };
 		2E9D22911BA1328600B88077 /* BaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E9D22901BA1328600B88077 /* BaseVC.m */; };
+		2EC93AC81BA9089A002A43B9 /* NSString+MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EC93AC71BA9089A002A43B9 /* NSString+MD5.m */; };
+		2EC93ACB1BA95909002A43B9 /* NSString+KulEncription.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EC93AC91BA95909002A43B9 /* NSString+KulEncription.m */; };
 		2EEE93661B9D9C0900987165 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EEE93651B9D9C0900987165 /* main.m */; };
 		2EEE93691B9D9C0900987165 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EEE93681B9D9C0900987165 /* AppDelegate.m */; };
 		2EEE936C1B9D9C0900987165 /* HomeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EEE936B1B9D9C0900987165 /* HomeVC.m */; };
@@ -19,7 +21,7 @@
 		2EEE93801B9D9C0900987165 /* KunAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EEE937F1B9D9C0900987165 /* KunAppTests.m */; };
 		2EEE938B1B9E938400987165 /* LoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EEE938A1B9E938400987165 /* LoginVC.m */; };
 		2EEE93921B9ED08700987165 /* SignUpVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EEE93911B9ED08700987165 /* SignUpVC.m */; };
-		2EEE93951B9ED78000987165 /* UpdateVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EEE93941B9ED78000987165 /* UpdateVC.m */; };
+		2EEE93951B9ED78000987165 /* DetailsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EEE93941B9ED78000987165 /* DetailsVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +41,10 @@
 		2E8475891BA01C5400D0CE86 /* MySingleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MySingleton.m; sourceTree = "<group>"; };
 		2E9D228F1BA1328600B88077 /* BaseVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseVC.h; sourceTree = "<group>"; };
 		2E9D22901BA1328600B88077 /* BaseVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseVC.m; sourceTree = "<group>"; };
+		2EC93AC61BA9089A002A43B9 /* NSString+MD5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MD5.h"; sourceTree = "<group>"; };
+		2EC93AC71BA9089A002A43B9 /* NSString+MD5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MD5.m"; sourceTree = "<group>"; };
+		2EC93AC91BA95909002A43B9 /* NSString+KulEncription.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+KulEncription.m"; sourceTree = "<group>"; };
+		2EC93ACA1BA95909002A43B9 /* NSString+KulEncription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+KulEncription.h"; sourceTree = "<group>"; };
 		2EEE93601B9D9C0900987165 /* KunApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KunApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EEE93641B9D9C0900987165 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2EEE93651B9D9C0900987165 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -56,8 +62,8 @@
 		2EEE938A1B9E938400987165 /* LoginVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginVC.m; sourceTree = "<group>"; };
 		2EEE93901B9ED08700987165 /* SignUpVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpVC.h; sourceTree = "<group>"; };
 		2EEE93911B9ED08700987165 /* SignUpVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpVC.m; sourceTree = "<group>"; };
-		2EEE93931B9ED78000987165 /* UpdateVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UpdateVC.h; sourceTree = "<group>"; };
-		2EEE93941B9ED78000987165 /* UpdateVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UpdateVC.m; sourceTree = "<group>"; };
+		2EEE93931B9ED78000987165 /* DetailsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailsVC.h; sourceTree = "<group>"; };
+		2EEE93941B9ED78000987165 /* DetailsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailsVC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +95,17 @@
 			name = Model;
 			sourceTree = "<group>";
 		};
+		2EC93AC21BA90797002A43B9 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				2EC93AC91BA95909002A43B9 /* NSString+KulEncription.m */,
+				2EC93ACA1BA95909002A43B9 /* NSString+KulEncription.h */,
+				2EC93AC61BA9089A002A43B9 /* NSString+MD5.h */,
+				2EC93AC71BA9089A002A43B9 /* NSString+MD5.m */,
+			);
+			name = Category;
+			sourceTree = "<group>";
+		};
 		2EEE93571B9D9C0900987165 = {
 			isa = PBXGroup;
 			children = (
@@ -112,6 +129,7 @@
 			children = (
 				2EEE93671B9D9C0900987165 /* AppDelegate.h */,
 				2EEE93681B9D9C0900987165 /* AppDelegate.m */,
+				2EC93AC21BA90797002A43B9 /* Category */,
 				2E8475841B9FCF0900D0CE86 /* Model */,
 				2EEE938C1B9E939800987165 /* ViewController */,
 				2EEE936D1B9D9C0900987165 /* Main.storyboard */,
@@ -157,8 +175,8 @@
 				2EEE936B1B9D9C0900987165 /* HomeVC.m */,
 				2EEE93891B9E938400987165 /* LoginVC.h */,
 				2EEE938A1B9E938400987165 /* LoginVC.m */,
-				2EEE93931B9ED78000987165 /* UpdateVC.h */,
-				2EEE93941B9ED78000987165 /* UpdateVC.m */,
+				2EEE93931B9ED78000987165 /* DetailsVC.h */,
+				2EEE93941B9ED78000987165 /* DetailsVC.m */,
 				2E9D228F1BA1328600B88077 /* BaseVC.h */,
 				2E9D22901BA1328600B88077 /* BaseVC.m */,
 			);
@@ -267,7 +285,9 @@
 			files = (
 				2EEE936C1B9D9C0900987165 /* HomeVC.m in Sources */,
 				2E84758A1BA01C5400D0CE86 /* MySingleton.m in Sources */,
-				2EEE93951B9ED78000987165 /* UpdateVC.m in Sources */,
+				2EC93AC81BA9089A002A43B9 /* NSString+MD5.m in Sources */,
+				2EEE93951B9ED78000987165 /* DetailsVC.m in Sources */,
+				2EC93ACB1BA95909002A43B9 /* NSString+KulEncription.m in Sources */,
 				2E9D22911BA1328600B88077 /* BaseVC.m in Sources */,
 				2EEE93691B9D9C0900987165 /* AppDelegate.m in Sources */,
 				2EEE93921B9ED08700987165 /* SignUpVC.m in Sources */,
@@ -396,6 +416,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Le Anh (8525PLZAYY)";
 				INFOPLIST_FILE = KunApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -408,6 +429,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Le Anh (8525PLZAYY)";
 				INFOPLIST_FILE = KunApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

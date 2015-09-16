@@ -8,8 +8,8 @@
 
 #import "SignUpVC.h"
 
+
 @interface SignUpVC ()
-@property NSMutableData * data;
 
 @end
 
@@ -20,7 +20,6 @@
     // Do any additional setup after loading the view.
     self.navigationController.title = @"Sign Up";
     //[self.btnSignUp setEnabled:NO];
-    
     //_kulUsersDict = [[NSMutableDictionary alloc] init];
     
 }
@@ -33,8 +32,10 @@
 - (void) SignUp{
     NSString * userName = self.tfUserName.text;
     NSString * passWord = self.tfPassword.text;
-    NSInteger sex = self.sgmSex.selectedSegmentIndex;
-    NSInteger phone = (NSInteger ) self.tfPhone.text.integerValue;
+    
+    
+//    NSInteger sex = self.sgmSex.selectedSegmentIndex;
+//    NSInteger phone = (NSInteger ) self.tfPhone.text.integerValue;
     
     if (![userName isEqualToString:@""] && ![passWord isEqualToString:@""]) {
         
@@ -54,36 +55,49 @@
 //                [singleton.kulUsersDict setObject:singleton.kulUsers forKey:DictKUserKey];
 //
 //            }
-//            
-//            UIAlertView * alert = [[UIAlertView alloc] initWithTitle:MESSAGE message:@"Sign up success!" delegate:self cancelButtonTitle:nil otherButtonTitles:OK, nil];
-//            alert.tag = 1;
-//            [alert show];
-//            NSLog(@"array %li ",singleton.kulUsers.count);
-//            NSLog(@"dictionary %@ ",[singleton.kulUsersDict objectForKey:DictKUserKey]);
-//            
-//            //Update
-//            self.tfUserName.text = nil;
-//            self.tfPassword.text = nil;
-//            //self.sgmSex.selectedSegmentIndex = 0;
-//            self.tfPhone.text = nil;
 //        }
         NSURL * url = [NSURL URLWithString:API_CreateUser];
         NSMutableURLRequest * request = [NSMutableURLRequest requestWithURL:url];
+        [request setValue:@"USER_AGENT" forHTTPHeaderField:@"User_Agent"];
         [request setHTTPMethod:@"POST"];
-        [request setValue:userName forHTTPHeaderField:@"UserName"];
-        [request setValue:passWord forHTTPHeaderField:@"Password"];
-        [request setValue:@"fdsfds" forHTTPHeaderField:@"ClientIP"];
-        [request setValue:@"ios" forHTTPHeaderField:@"ClientOS"];
-        [request setValue:@"2015-09-15 17:57:00" forHTTPHeaderField:@"Time"];
-        [request setValue:@"fhk423" forHTTPHeaderField:@"Sign"];
-        [request setValue:@"123456789" forHTTPHeaderField:@"AppKey"];
+        [request setValue:@"application/x-www-form-urlencoded; charset=utf-8" forHTTPHeaderField:@"Content-Type"];
         
-        NSURLConnection * connection = [[NSURLConnection alloc] initWithRequest:request delegate:self];
-        [connection start];
+        NSString * md5Password = [passWord kulMd5String];
+        NSString * clientIP = ClientIP;
+        NSString * clientOS = ClientOS;
+        
+        NSDateFormatter *dateFormatter=[[NSDateFormatter alloc] init];
+        [dateFormatter setDateFormat:DATE_FORMAT];
+        NSString * time = [dateFormatter stringFromDate:[NSDate date]];
+        
+        NSString * sign = [NSString stringWithFormat:@"%@%@%@",userName,md5Password,time];
+        NSString * sha256Sign = [sign kulHMACStringWithKey:SECRET_KEY];
+
+        NSString * appKey = APP_KEY;
+        
+        NSString * post = [NSString stringWithFormat:POST_STRING,userName,md5Password,clientIP,clientOS,time,sha256Sign,appKey];
+        NSData * postData = [post dataUsingEncoding:NSUTF8StringEncoding];
+        [request setHTTPBody:postData];
+        
+        NSURLSession * session = [NSURLSession sharedSession];
+        [[session dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+            NSMutableDictionary * dicts = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
+            NSLog(@"%@",dicts);
+            NSInteger result = [[dicts objectForKey:@"e"] integerValue];
+            if (result == 0) {
+                UIAlertView * alert = [[UIAlertView alloc] initWithTitle:MESSAGE message:@"Sign up success!" delegate:self cancelButtonTitle:nil otherButtonTitles:OK, nil];
+                alert.tag = 1;
+                [alert show];
+            } else {
+                UIAlertView * alert = [[UIAlertView alloc] initWithTitle:MESSAGE message:@"Sign up fail!" delegate:self cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
+                [alert show];
+            }
+        }] resume];
     }
     else
     {
-        NSLog(@"Chua nhap UserName + Password");
+        UIAlertView * alert = [[UIAlertView alloc] initWithTitle:MESSAGE message:@"Sign up fail!" delegate:self cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
+        [alert show];
     }
     
 }
@@ -91,28 +105,6 @@
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
     if (alertView.tag == 1 &&buttonIndex == 0) {
         [self.navigationController popViewControllerAnimated:YES];
-    }
-}
-
-- (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response{
-    self.data = [[NSMutableData alloc] init];
-}
-
-- (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data{
-    [self.data appendData:data];
-}
-
-- (void)connectionDidFinishLoading:(NSURLConnection *)connection{
-    NSMutableDictionary * dicts = [NSJSONSerialization JSONObjectWithData:self.data options:NSJSONReadingMutableContainers error:nil];
-    NSLog(@"%@",dicts);
-    NSInteger result = [[dicts objectForKey:@"e"] integerValue];
-    if (result == 0) {
-        UIAlertView * alert = [[UIAlertView alloc] initWithTitle:MESSAGE message:@"Sign up success!" delegate:self cancelButtonTitle:nil otherButtonTitles:OK, nil];
-        alert.tag = 1;
-        [alert show];
-    } else {
-        UIAlertView * alert = [[UIAlertView alloc] initWithTitle:@"Message" message:@"Sign up fail!" delegate:self cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
-        [alert show];
     }
 }
 

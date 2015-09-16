@@ -14,6 +14,7 @@
 @property NSString * passWord;
 @property NSInteger sex; //0 - Male/ 1 - Female
 @property NSInteger phoneNumber;
+@property NSInteger userID;
 
 - (KulUser *) initKulUserWithUserName:(NSString *) username withPass:(NSString *) pass withSex:(NSInteger ) sex withPhone:(NSInteger ) phone;
 
